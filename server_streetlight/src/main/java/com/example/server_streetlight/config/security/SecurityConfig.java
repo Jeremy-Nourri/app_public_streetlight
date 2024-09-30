@@ -60,7 +60,12 @@ public class SecurityConfig {
                         .requestMatchers("*").permitAll()
                         .requestMatchers("*").authenticated()
                 )
-                .addFilterBefore(jwtRequestFilter(), UsernamePasswordAuthenticationFilter.class);
+                .formLogin((form) -> form
+                        .loginPage("/login")                      // Custom login page
+                        .permitAll()
+                )
+                .logout((logout) -> logout.permitAll());
+                http.addFilterBefore(jwtRequestFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
