@@ -8,10 +8,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+<<<<<<< HEAD
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+=======
+>>>>>>> 9f9791130151d8a27e5ddfb125af09b80ccf74ee
 @Data
 @Builder
 @AllArgsConstructor
@@ -30,6 +33,7 @@ public class Streetlight {
     private boolean isActive;
 
     @Column(nullable = false)
+<<<<<<< HEAD
     private double brightness;
 
     @Column(nullable = false)
@@ -43,5 +47,11 @@ public class Streetlight {
 
     @ManyToMany(mappedBy = "streetlights")
     private Set<ManagementRule> managementRules = new HashSet<>();
+=======
+    private String brightness;
+
+    @Column(nullable = false)
+    private String power;
+>>>>>>> 9f9791130151d8a27e5ddfb125af09b80ccf74ee
 
 }

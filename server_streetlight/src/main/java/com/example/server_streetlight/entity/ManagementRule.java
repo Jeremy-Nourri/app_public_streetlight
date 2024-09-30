@@ -6,8 +6,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+<<<<<<< HEAD
 import java.util.HashSet;
 
+=======
+>>>>>>> 9f9791130151d8a27e5ddfb125af09b80ccf74ee
 @Data
 @Builder
 @AllArgsConstructor
@@ -28,6 +31,7 @@ public class ManagementRule {
     @Column(nullable = false)
     private String action;
 
+<<<<<<< HEAD
    @ManyToMany
    @JoinTable(
            name = "management_rule_streetlight",
@@ -36,5 +40,9 @@ public class ManagementRule {
    )
    private HashSet<Streetlight> streetlights;
 
+=======
+    @ManyToOne
+    private Streetlight streetlight;
+>>>>>>> 9f9791130151d8a27e5ddfb125af09b80ccf74ee
 
 }

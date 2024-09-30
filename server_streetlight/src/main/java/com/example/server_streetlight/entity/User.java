@@ -6,35 +6,25 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
-@Entity
-public class Sensor {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
-
-    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private SensorType type;
+    private String firstname;
 
     @Column(nullable = false)
-    private boolean isActive;
+    private String lastname;
 
     @Column(nullable = false)
-    private String sensorValue;
-
-    @ManyToOne
-<<<<<<< HEAD
-    @JoinColumn(name = "streetlight_id", nullable = false)
-=======
->>>>>>> 9f9791130151d8a27e5ddfb125af09b80ccf74ee
-    private Streetlight streetlight;
+    private String email;
 
     @Column(nullable = false)
-    private String sensorLocation;
-
+    private String password;
 }
