@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 @Service
 public class StreetLightServiceImpl implements StreetLightService, Observer {
 
+
     @Autowired
     private final StreetlightRepository streetlightRepository;
 
