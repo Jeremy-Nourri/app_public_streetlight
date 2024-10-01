@@ -73,6 +73,11 @@ public class StreetLightServiceImpl implements StreetLightService {
         return false;
     }
 
+    @Override
+    public List<StreetLightResponseDTO> getStreetlightsByManagementRuleId(Long managementRuleId) {
+        return List.of();
+    }
+
     public StreetLightResponseDTO convertToDtoWithFullAttributes(Streetlight streetlight) {
         return StreetLightResponseDTO.builder()
                 .id(streetlight.getId())
