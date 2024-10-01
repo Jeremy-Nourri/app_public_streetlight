@@ -19,9 +19,9 @@ public class StreetlightRequestDTO {
 
     private Boolean isActive;
 
-    private double brightness;
+    private String brightness;
 
-    private double power;
+    private String power;
 
     private List<Long> schedulesIds;
 

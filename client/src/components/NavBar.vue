@@ -2,7 +2,7 @@
     <nav class="h-full w-1/5 p-4 bg-white shadow">
 
 
-                <div class="flex justify-evenly items-center ">
+                <div class="flex justify-evenly items-center mb-6">
                     <img class="w-16" src="../assets/img/Logo.webp" alt="Logo Citizen Electrical">
                     <div class="flex flex-col">
                         <h1 class="text-xl font-bold">CITYZEN</h1>
@@ -17,6 +17,6 @@
     </nav>
 </template>
 
-<script>
+<script setup>
 
 </script>

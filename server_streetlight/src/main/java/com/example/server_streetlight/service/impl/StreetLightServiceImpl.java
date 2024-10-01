@@ -42,8 +42,8 @@ public class StreetLightServiceImpl implements StreetLightService {
     public StreetLightResponseDTO createStreetlight(StreetlightRequestDTO streetlightRequestDTO) {
         Streetlight streetlight = new Streetlight();
         streetlight.setLocation(streetlightRequestDTO.getLocation());
-        streetlight.setBrightness(streetlightRequestDTO.getBrightness());
-        streetlight.setPower(streetlightRequestDTO.getPower());
+        streetlight.setBrightness(Double.parseDouble(streetlightRequestDTO.getBrightness()));
+        streetlight.setPower(Double.parseDouble(streetlightRequestDTO.getPower()));
         return convertToDTO(streetlightRepository.save(streetlight));
 
     }
@@ -52,8 +52,8 @@ public class StreetLightServiceImpl implements StreetLightService {
     public StreetLightResponseDTO updateStreetlight(Long id, StreetlightRequestDTO streetlightRequestDTO) {
         return streetlightRepository.findById(id).map(streetlight -> {
             streetlight.setLocation(streetlightRequestDTO.getLocation());
-            streetlight.setBrightness(streetlightRequestDTO.getBrightness());
-            streetlight.setPower(streetlightRequestDTO.getPower());
+            streetlight.setBrightness(Double.parseDouble(streetlightRequestDTO.getBrightness()));
+            streetlight.setPower(Double.parseDouble(streetlightRequestDTO.getPower()));
             return convertToDTO(streetlightRepository.save(streetlight));
         }).orElseThrow(() -> new StreetlightNotFoundException("Streetlight with id " + id + " not found"));
     }

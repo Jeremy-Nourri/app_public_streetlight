@@ -16,6 +16,8 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
+  width: max-content;
 }
 
 button {
@@ -25,20 +27,38 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: opacity 0.2s;
+  background-color: #0C0A4D;
+  color: #f0f0f0;
+  margin-top: 1em;
 }
 button:hover {
-  border-color: #646cff;
+  opacity: 0.6;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+input {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
 #app {
-  max-width: 1280px;
   height: 100vh;
   margin: 0 auto;
   text-align: center;

@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7103951a-0648-409c-80e6-ab66d1d58990" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/NavBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/streetLight/StreetlightRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/streetLight/StreetlightRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/StreetLightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/StreetLightServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +44,10 @@
     &quot;accountId&quot;: &quot;56fd490e-ee44-4680-bf78-1223f49aacfe&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -51,7 +61,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "back__streetlight",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
