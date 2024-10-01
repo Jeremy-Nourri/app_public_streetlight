@@ -2,9 +2,11 @@ package com.example.server_streetlight.service;
 
 import com.example.server_streetlight.dto.streetLight.StreetLightResponseDTO;
 import com.example.server_streetlight.dto.streetLight.StreetlightRequestDTO;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface StreetLightService {
 
     List<StreetLightResponseDTO> getAllStreetlights();
