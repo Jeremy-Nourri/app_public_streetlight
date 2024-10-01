@@ -1,5 +1,6 @@
 package com.example.server_streetlight.dto.managementRule;
 
+import com.example.server_streetlight.dto.streetLight.StreetLightResponseDTO;
 import com.example.server_streetlight.entity.Streetlight;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,5 +23,5 @@ public class ManagementRuleResponseDTO {
 
     private String action;
 
-    private HashSet<Streetlight> streetlights;
+    private HashSet<StreetLightResponseDTO> streetlights;
 }

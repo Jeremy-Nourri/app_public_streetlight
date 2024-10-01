@@ -1,23 +1,22 @@
 package com.example.server_streetlight.service.impl;
 
-import com.example.server_streetlight.dto.schedule.ScheduleRequestDTO;
+import com.example.server_streetlight.dto.managementRule.ManagementRuleResponseDTO;
+import com.example.server_streetlight.dto.schedule.ScheduleResponseDTO;
+import com.example.server_streetlight.dto.sensor.SensorResponseDTO;
 import com.example.server_streetlight.dto.streetLight.StreetLightResponseDTO;
 import com.example.server_streetlight.dto.streetLight.StreetlightRequestDTO;
-import com.example.server_streetlight.entity.ManagementRule;
-import com.example.server_streetlight.entity.Schedule;
-import com.example.server_streetlight.entity.Sensor;
 import com.example.server_streetlight.entity.Streetlight;
+import com.example.server_streetlight.exception.StreetlightNotFoundException;
 import com.example.server_streetlight.repository.StreetlightRepository;
-import com.example.server_streetlight.service.StreetLightService;
+import com.example.server_streetlight.service.StreetlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class StreetLightServiceImpl implements StreetLightService {
+public class StreetLightServiceImpl implements StreetlightService {
 
     @Autowired
     private final StreetlightRepository streetlightRepository;
@@ -35,7 +34,7 @@ public class StreetLightServiceImpl implements StreetLightService {
     @Override
     public StreetLightResponseDTO getStreetlightById(Long id) {
         return streetlightRepository.findById(id).map(this::convertToDTO).orElseThrow(
-                () -> new RuntimeException("Streetlight with id " + id + " not found")
+                () -> new StreetlightNotFoundException("Streetlight with id " + id + " not found")
         );
     }
 
@@ -45,55 +44,80 @@ public class StreetLightServiceImpl implements StreetLightService {
         streetlight.setLocation(streetlightRequestDTO.getLocation());
         streetlight.setBrightness(streetlightRequestDTO.getBrightness());
         streetlight.setPower(streetlightRequestDTO.getPower());
-        List<Schedule> schedules = streetlightRequestDTO.getSchedulesIds().stream()
-                .map(scheduleId -> {
-                    Schedule schedule = new Schedule();
-                    schedule.setId(scheduleId);
-                    return schedule;
-                }).collect(Collectors.toList());
-        streetlight.setSchedules(schedules);
-        List<Sensor> sensors = streetlightRequestDTO.getSensorsIds().stream()
-                .map(sensorId -> {
-                    Sensor sensor = new Sensor();
-                    sensor.setId(sensorId);
-                    return sensor;
-                }).collect(Collectors.toList());
-        streetlight.setSensors(sensors);
-        HashSet<ManagementRule> managementRules = streetlightRequestDTO.getManagementRulesIds().stream()
-                .map(managementRuleId -> {
-                    ManagementRule managementRule = new ManagementRule();
-                    managementRule.setId(managementRuleId);
-                    return managementRule;
-                }).collect(Collectors.toCollection(HashSet::new));
-        streetlight.setManagementRules(managementRules);
         return convertToDTO(streetlightRepository.save(streetlight));
 
     }
 
     @Override
     public StreetLightResponseDTO updateStreetlight(Long id, StreetlightRequestDTO streetlightRequestDTO) {
-        return null;
+        return streetlightRepository.findById(id).map(streetlight -> {
+            streetlight.setLocation(streetlightRequestDTO.getLocation());
+            streetlight.setBrightness(streetlightRequestDTO.getBrightness());
+            streetlight.setPower(streetlightRequestDTO.getPower());
+            return convertToDTO(streetlightRepository.save(streetlight));
+        }).orElseThrow(() -> new StreetlightNotFoundException("Streetlight with id " + id + " not found"));
     }
 
     @Override
     public boolean deleteStreetlight(Long id) {
-        return false;
+        Streetlight streetlight = streetlightRepository.findById(id).orElseThrow(
+                () -> new StreetlightNotFoundException("Streetlight with id " + id + " not found")
+        );
+        streetlightRepository.delete(streetlight);
+        Streetlight deletedStreetlight = streetlightRepository.findById(id).orElse(null);
+        return deletedStreetlight == null;
     }
 
     @Override
-    public boolean activeStreetlight(Long id) {
-        return false;
+    public List<StreetLightResponseDTO> getStreetlightsByManagementRuleId(Long managementRuleId) {
+        List<Streetlight> streetlights = streetlightRepository.findByManagementRulesId(managementRuleId);
+        return streetlights.stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
-    private StreetLightResponseDTO convertToDTO(Streetlight streetlight) {
+    public StreetLightResponseDTO convertToDtoWithFullAttributes(Streetlight streetlight) {
         return StreetLightResponseDTO.builder()
                 .id(streetlight.getId())
                 .location(streetlight.getLocation())
                 .brightness(streetlight.getBrightness())
                 .power(streetlight.getPower())
-                .schedules(streetlight.getSchedules())
-                .sensors(streetlight.getSensors())
-                .managementRules(streetlight.getManagementRules())
+                .schedules(streetlight.getSchedules().stream().map(schedule -> ScheduleResponseDTO.builder()
+                        .id(schedule.getId())
+                        .startTime(schedule.getStartTime())
+                        .endTime(schedule.getEndTime())
+                        .streetlight(StreetLightResponseDTO.builder()
+                                .id(schedule.getStreetlight().getId())
+                                .location(schedule.getStreetlight().getLocation())
+                                .build())
+                        .build()).collect(Collectors.toList()))
+                .sensors(streetlight.getSensors().stream().map(sensor -> SensorResponseDTO.builder()
+                        .id(sensor.getId())
+                        .type(sensor.getType())
+                        .isActive(sensor.isActive())
+                        .sensorValue(sensor.getSensorValue())
+                        .streetlight(StreetLightResponseDTO.builder()
+                                .id(sensor.getStreetlight().getId())
+                                .location(sensor.getStreetlight().getLocation())
+                                .build())
+                        .sensorLocation(sensor.getSensorLocation())
+                        .build()).collect(Collectors.toList()))
+                .managementRules(streetlight.getManagementRules().stream().map(managementRule -> ManagementRuleResponseDTO.builder()
+                        .id(managementRule.getId())
+                        .ruleName(managementRule.getRuleName())
+                        .condition(managementRule.getCondition())
+                        .action(managementRule.getAction())
+                        .build()).collect(Collectors.toSet()))
+                .isActive(streetlight.isActive())
+
+                .build();
+
+    }
+
+    public StreetLightResponseDTO convertToDTO(Streetlight streetlight) {
+        return StreetLightResponseDTO.builder()
+                .id(streetlight.getId())
+                .location(streetlight.getLocation())
+                .brightness(streetlight.getBrightness())
+                .power(streetlight.getPower())
                 .build();
     }
 }
