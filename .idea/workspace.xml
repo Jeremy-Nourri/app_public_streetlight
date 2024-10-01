@@ -50,8 +50,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Jeremy-Nourri/app_public_streetlight&quot;,
-    &quot;accountId&quot;: &quot;e957c433-6ce6-45e6-bd06-c7cd34548778&quot;
+    &quot;url&quot;: &quot;https://github.com/Jeremy-Nourri/app_public_streetlight.git&quot;,
+    &quot;accountId&quot;: &quot;56fd490e-ee44-4680-bf78-1223f49aacfe&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -63,6 +63,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -76,6 +77,22 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "back__streetlight",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> 4f143478edec8d282914418fdc7954d28687638a
   }
 }</component>
   <component name="RecentsManager">
@@ -96,8 +113,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -110,10 +127,16 @@
       <option name="presentableId" value="Default" />
       <updated>1727764115243</updated>
       <workItem from="1727764116566" duration="4163000" />
+<<<<<<< HEAD
       <workItem from="1727768290736" duration="2894000" />
       <workItem from="1727775751124" duration="46000" />
       <workItem from="1727777295602" duration="420000" />
       <workItem from="1727777728761" duration="224000" />
+=======
+      <workItem from="1727768290736" duration="1377000" />
+      <workItem from="1727770458916" duration="56000" />
+      <workItem from="1727770585578" duration="3611000" />
+>>>>>>> 4f143478edec8d282914418fdc7954d28687638a
     </task>
     <servers />
   </component>
