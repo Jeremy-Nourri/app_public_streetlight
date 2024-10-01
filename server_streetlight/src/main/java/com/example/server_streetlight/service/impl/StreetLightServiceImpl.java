@@ -9,6 +9,10 @@ import com.example.server_streetlight.entity.Streetlight;
 import com.example.server_streetlight.exception.StreetlightNotFoundException;
 import com.example.server_streetlight.repository.StreetlightRepository;
 import com.example.server_streetlight.service.StreetLightService;
+import com.example.server_streetlight.utils.observers.Observer;
+import com.example.server_streetlight.utils.observers.TimeOfDay;
+import com.example.server_streetlight.utils.observers.Weather;
+import com.example.server_streetlight.utils.observers.WeatherCondition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +20,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class StreetLightServiceImpl implements StreetLightService {
+public class StreetLightServiceImpl implements StreetLightService, Observer {
+
 
     @Autowired
     private final StreetlightRepository streetlightRepository;
@@ -73,6 +78,11 @@ public class StreetLightServiceImpl implements StreetLightService {
         return false;
     }
 
+    @Override
+    public List<StreetLightResponseDTO> getStreetlightsByManagementRuleId(Long managementRuleId) {
+        return List.of();
+    }
+
     public StreetLightResponseDTO convertToDtoWithFullAttributes(Streetlight streetlight) {
         return StreetLightResponseDTO.builder()
                 .id(streetlight.getId())
@@ -118,5 +128,45 @@ public class StreetLightServiceImpl implements StreetLightService {
                 .brightness(streetlight.getBrightness())
                 .power(streetlight.getPower())
                 .build();
+    }
+
+    @Override
+    public void update(Weather weather) {
+        if (weather.getTimeOfDay() == TimeOfDay.NIGHTTIME ||
+                weather.getTimeOfDay() == TimeOfDay.AURORA ||
+                weather.getTimeOfDay() == TimeOfDay.DUSK) {
+
+            if (weather.getWeatherCondition() == WeatherCondition.SNOW) {
+                adjustStreetlightBrightness(3);
+            }
+
+            else if (weather.getWeatherCondition() == WeatherCondition.FOG ||
+                    weather.getWeatherCondition() == WeatherCondition.RAIN) {
+                adjustStreetlightBrightness(2);
+            }
+
+            else {
+                adjustStreetlightBrightness(1);
+            }
+        }
+
+        else if ((weather.getWeatherCondition() == WeatherCondition.FOG ||
+                weather.getWeatherCondition() == WeatherCondition.RAIN||
+                weather.getWeatherCondition() == WeatherCondition.SNOW) &&
+                weather.getTimeOfDay() == TimeOfDay.DAYTIME) {
+            adjustStreetlightBrightness(2);
+        }
+
+        else {
+            adjustStreetlightBrightness(0);
+        }
+    }
+
+    private void adjustStreetlightBrightness(int brightness) {
+        List<Streetlight> streetlights = (List<Streetlight>) streetlightRepository.findAll();
+        for (Streetlight streetlight : streetlights) {
+            streetlight.setBrightness(brightness);
+            streetlightRepository.save(streetlight);
+        }
     }
 }
