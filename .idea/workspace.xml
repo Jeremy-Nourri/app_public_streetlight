@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7103951a-0648-409c-80e6-ab66d1d58990" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/assets/img/Logo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/NavBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/router/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/StreetLightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/StreetLightService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/StreetLightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/StreetLightServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
