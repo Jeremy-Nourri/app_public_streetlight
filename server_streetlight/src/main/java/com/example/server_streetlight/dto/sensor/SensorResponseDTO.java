@@ -1,5 +1,6 @@
 package com.example.server_streetlight.dto.sensor;
 
+import com.example.server_streetlight.dto.streetLight.StreetLightResponseDTO;
 import com.example.server_streetlight.entity.SensorType;
 import com.example.server_streetlight.entity.Streetlight;
 import lombok.AllArgsConstructor;
@@ -21,7 +22,7 @@ public class SensorResponseDTO {
 
     private String sensorValue;
 
-    private Streetlight streetlight;
+    private StreetLightResponseDTO streetlight;
 
     private String sensorLocation;
 }

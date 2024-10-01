@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7103951a-0648-409c-80e6-ab66d1d58990" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/exception/StreetlightNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/managementRule/ManagementRuleResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/managementRule/ManagementRuleResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/schedule/ScheduleResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/schedule/ScheduleResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/sensor/SensorResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/sensor/SensorResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/streetLight/StreetLightResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/streetLight/StreetLightResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/ManagementRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/ManagementRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/Sensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/Streetlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/Streetlight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/repository/StreetlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/repository/StreetlightRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/ManagementRuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/ManagementRuleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/StreetlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/StreetlightService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/StreetLightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/StreetLightServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Exception" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jeremy-Nourri&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Jeremy-Nourri/app_public_streetlight&quot;,
+    &quot;accountId&quot;: &quot;e957c433-6ce6-45e6-bd06-c7cd34548778&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2mpCQMFQl1V5bIcQH9MFBAmnhuw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrateur\Documents" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ServerStreetlightApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="server_streetlight" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.server_streetlight.ServerStreetlightApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7103951a-0648-409c-80e6-ab66d1d58990" name="Changes" comment="" />
+      <created>1727764115243</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727764115243</updated>
+      <workItem from="1727764116566" duration="4163000" />
+      <workItem from="1727768290736" duration="1377000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

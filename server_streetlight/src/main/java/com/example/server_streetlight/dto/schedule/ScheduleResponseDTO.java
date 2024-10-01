@@ -1,5 +1,6 @@
 package com.example.server_streetlight.dto.schedule;
 
+import com.example.server_streetlight.dto.streetLight.StreetLightResponseDTO;
 import com.example.server_streetlight.entity.Day;
 import com.example.server_streetlight.entity.Streetlight;
 import lombok.AllArgsConstructor;
@@ -23,7 +24,7 @@ public class ScheduleResponseDTO {
 
     private Day day;
 
-    private Streetlight streetlight;
+    private StreetLightResponseDTO streetlight;
 
 
 }

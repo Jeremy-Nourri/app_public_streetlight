@@ -28,10 +28,7 @@ public class Sensor {
     private String sensorValue;
 
     @ManyToOne
-<<<<<<< HEAD
     @JoinColumn(name = "streetlight_id", nullable = false)
-=======
->>>>>>> 9f9791130151d8a27e5ddfb125af09b80ccf74ee
     private Streetlight streetlight;
 
     @Column(nullable = false)

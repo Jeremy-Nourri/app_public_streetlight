@@ -1,6 +1,5 @@
 package com.example.server_streetlight.config.jwt;
 
-import com.example.server_streetlight.service.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

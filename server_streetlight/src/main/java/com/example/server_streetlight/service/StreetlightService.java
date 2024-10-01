@@ -1,16 +1,14 @@
 package com.example.server_streetlight.service;
+import com.example.server_streetlight.repository.StreetlightRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Indexed;
+import org.springframework.stereotype.Service;
 
-import com.example.server_streetlight.dto.streetLight.StreetLightResponseDTO;
-import com.example.server_streetlight.dto.streetLight.StreetlightRequestDTO;
+@Service
+public class StreetlightService {
 
-import java.util.List;
+    @Autowired
+    private StreetlightRepository streetlightRepository;
 
-public interface StreetLightService {
-    List<StreetLightResponseDTO> getAllStreetlights();
-    StreetLightResponseDTO getStreetlightById(Long id);
-    StreetLightResponseDTO createStreetlight(StreetlightRequestDTO streetlightRequestDTO);
-    StreetLightResponseDTO updateStreetlight(Long id, StreetlightRequestDTO streetlightRequestDTO);
-    boolean deleteStreetlight(Long id);
-    boolean activeStreetlight(Long id);
 
 }

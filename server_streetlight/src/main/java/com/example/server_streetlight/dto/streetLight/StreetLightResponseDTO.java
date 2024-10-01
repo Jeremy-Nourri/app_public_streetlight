@@ -1,8 +1,8 @@
 package com.example.server_streetlight.dto.streetLight;
 
-import com.example.server_streetlight.entity.ManagementRule;
-import com.example.server_streetlight.entity.Schedule;
-import com.example.server_streetlight.entity.Sensor;
+import com.example.server_streetlight.dto.managementRule.ManagementRuleResponseDTO;
+import com.example.server_streetlight.dto.schedule.ScheduleResponseDTO;
+import com.example.server_streetlight.dto.sensor.SensorResponseDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,9 +28,9 @@ public class StreetLightResponseDTO {
 
     private double power;
 
-    private List<Schedule> schedules;
+    private List<ScheduleResponseDTO> schedules;
 
-    private List<Sensor> sensors;
+    private List<SensorResponseDTO> sensors;
 
-    private Set<ManagementRule> managementRules = new HashSet<>();
+    private Set<ManagementRuleResponseDTO> managementRules = new HashSet<>();
 }
