@@ -69,9 +69,8 @@ public class StreetLightServiceImpl implements StreetlightService {
     }
 
     @Override
-    public List<StreetLightResponseDTO> getStreetlightsByManagementRuleId(Long managementRuleId) {
-        List<Streetlight> streetlights = streetlightRepository.findByManagementRulesId(managementRuleId);
-        return streetlights.stream().map(this::convertToDTO).collect(Collectors.toList());
+    public boolean activeStreetlight(Long id) {
+        return false;
     }
 
     public StreetLightResponseDTO convertToDtoWithFullAttributes(Streetlight streetlight) {
