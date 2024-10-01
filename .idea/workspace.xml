@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7103951a-0648-409c-80e6-ab66d1d58990" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/exception/StreetlightNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/managementRule/ManagementRuleResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/managementRule/ManagementRuleResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/schedule/ScheduleResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/schedule/ScheduleResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/sensor/SensorResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/sensor/SensorResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/streetLight/StreetLightResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/dto/streetLight/StreetLightResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/ManagementRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/ManagementRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/Sensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/Streetlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/Streetlight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/exception/NotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/repository/StreetlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/repository/StreetlightRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/ManagementRuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/ManagementRuleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/StreetlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/StreetlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/StreetLightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/StreetLightServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +17,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Exception" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,8 +34,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Jeremy-Nourri/app_public_streetlight&quot;,
-    &quot;accountId&quot;: &quot;e957c433-6ce6-45e6-bd06-c7cd34548778&quot;
+    &quot;url&quot;: &quot;https://github.com/Jeremy-Nourri/app_public_streetlight.git&quot;,
+    &quot;accountId&quot;: &quot;56fd490e-ee44-4680-bf78-1223f49aacfe&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -65,7 +50,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "back__streetlight",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -95,8 +81,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -110,10 +96,23 @@
       <updated>1727764115243</updated>
       <workItem from="1727764116566" duration="4163000" />
       <workItem from="1727768290736" duration="1377000" />
+      <workItem from="1727770458916" duration="56000" />
+      <workItem from="1727770585578" duration="3611000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
