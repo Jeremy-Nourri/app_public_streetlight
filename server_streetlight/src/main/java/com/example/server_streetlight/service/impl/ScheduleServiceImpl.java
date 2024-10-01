@@ -58,8 +58,6 @@ public class ScheduleServiceImpl implements ScheduleService {
         return deletedSchedule == null;
     }
 
-
-
     public ScheduleResponseDTO convertToDTO(Schedule schedule) {
         ScheduleResponseDTO scheduleResponseDTO = new ScheduleResponseDTO();
         scheduleResponseDTO.setId(schedule.getId());
