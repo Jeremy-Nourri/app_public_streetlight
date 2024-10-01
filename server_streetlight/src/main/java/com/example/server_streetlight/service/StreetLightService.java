@@ -18,4 +18,6 @@ public interface StreetLightService {
     boolean deleteStreetlight(Long id);
 
     boolean activeStreetlight(Long id);
+
+    List<StreetLightResponseDTO> getStreetlightsByManagementRuleId(Long managementRuleId);
 }
