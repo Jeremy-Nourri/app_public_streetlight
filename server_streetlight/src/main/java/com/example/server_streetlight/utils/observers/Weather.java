@@ -7,4 +7,5 @@ import lombok.Data;
 @Data
 public class Weather {
     private TimeOfDay timeOfDay;
+    private WeatherCondition weatherCondition;
 }
