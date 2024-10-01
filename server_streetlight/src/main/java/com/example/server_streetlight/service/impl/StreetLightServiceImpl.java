@@ -8,7 +8,7 @@ import com.example.server_streetlight.dto.streetLight.StreetlightRequestDTO;
 import com.example.server_streetlight.entity.Streetlight;
 import com.example.server_streetlight.exception.StreetlightNotFoundException;
 import com.example.server_streetlight.repository.StreetlightRepository;
-import com.example.server_streetlight.service.StreetlightService;
+import com.example.server_streetlight.service.StreetLightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class StreetLightServiceImpl implements StreetlightService {
+public class StreetLightServiceImpl implements StreetLightService {
 
     @Autowired
     private final StreetlightRepository streetlightRepository;
