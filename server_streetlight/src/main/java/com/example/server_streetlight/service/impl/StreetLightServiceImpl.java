@@ -9,6 +9,7 @@ import com.example.server_streetlight.entity.Streetlight;
 import com.example.server_streetlight.exception.StreetlightNotFoundException;
 import com.example.server_streetlight.repository.StreetlightRepository;
 import com.example.server_streetlight.service.StreetLightService;
+import com.example.server_streetlight.utils.observerTime.StreetlightObserver;
 import com.example.server_streetlight.utils.observers.Observer;
 import com.example.server_streetlight.utils.observers.TimeOfDay;
 import com.example.server_streetlight.utils.observers.Weather;
@@ -20,7 +21,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class StreetLightServiceImpl implements StreetLightService, Observer {
+public class StreetLightServiceImpl implements StreetLightService, StreetlightObserver {
 
 
     @Autowired
@@ -130,34 +131,43 @@ public class StreetLightServiceImpl implements StreetLightService, Observer {
                 .build();
     }
 
+//    @Override
+//    public void update(Weather weather) {
+//        if (weather.getTimeOfDay() == TimeOfDay.NIGHTTIME ||
+//                weather.getTimeOfDay() == TimeOfDay.AURORA ||
+//                weather.getTimeOfDay() == TimeOfDay.DUSK) {
+//
+//            if (weather.getWeatherCondition() == WeatherCondition.SNOW) {
+//                adjustStreetlightBrightness(3);
+//            }
+//
+//            else if (weather.getWeatherCondition() == WeatherCondition.FOG ||
+//                    weather.getWeatherCondition() == WeatherCondition.RAIN) {
+//                adjustStreetlightBrightness(2);
+//            }
+//
+//            else {
+//                adjustStreetlightBrightness(1);
+//            }
+//        }
+//
+//        else if ((weather.getWeatherCondition() == WeatherCondition.FOG ||
+//                weather.getWeatherCondition() == WeatherCondition.RAIN||
+//                weather.getWeatherCondition() == WeatherCondition.SNOW) &&
+//                weather.getTimeOfDay() == TimeOfDay.DAYTIME) {
+//            adjustStreetlightBrightness(2);
+//        }
+//
+//        else {
+//            adjustStreetlightBrightness(0);
+//        }
+//    }
+
     @Override
-    public void update(Weather weather) {
-        if (weather.getTimeOfDay() == TimeOfDay.NIGHTTIME ||
-                weather.getTimeOfDay() == TimeOfDay.AURORA ||
-                weather.getTimeOfDay() == TimeOfDay.DUSK) {
-
-            if (weather.getWeatherCondition() == WeatherCondition.SNOW) {
-                adjustStreetlightBrightness(3);
-            }
-
-            else if (weather.getWeatherCondition() == WeatherCondition.FOG ||
-                    weather.getWeatherCondition() == WeatherCondition.RAIN) {
-                adjustStreetlightBrightness(2);
-            }
-
-            else {
-                adjustStreetlightBrightness(1);
-            }
-        }
-
-        else if ((weather.getWeatherCondition() == WeatherCondition.FOG ||
-                weather.getWeatherCondition() == WeatherCondition.RAIN||
-                weather.getWeatherCondition() == WeatherCondition.SNOW) &&
-                weather.getTimeOfDay() == TimeOfDay.DAYTIME) {
-            adjustStreetlightBrightness(2);
-        }
-
-        else {
+    public void update(int hour) {
+        if (hour >= 19 || hour < 7) {
+            adjustStreetlightBrightness(1);
+        } else {
             adjustStreetlightBrightness(0);
         }
     }
