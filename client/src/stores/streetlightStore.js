@@ -1,26 +1,41 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 export const useStreetlightStore = defineStore('streetlight', {
     state: () => ({
-        streetlights: [],
-        streetlight: {},
+        isActive: false,
     }),
     getters: {
-        getStreetlights: (state) => state.streetlights,
-        getStreetlight: (state) => state.streetlight
+        isActive: (state) => state.isActive
     },
     actions: {
-        async fetchStreetlights(){
+        async fetchStreetlightStatusById(id) {
             try {
-                const response = await fetch('http://localhost:3000/streetlights')
-                const streetlights = await response.json()
-                this.streetlights = streetlights
+                const response = await fetch(`http://localhost:8080/api/streetlights/${id}/status`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json', 
+
+                    }
+                });
+        
+                if (response.ok) {
+                    const data = await response.json();
+                    this.isActive = data;
+                    
+                } else {
+                    console.error('Erreur lors de la récupération de l\'état du lampadaire.');
+                }
             } catch (error) {
-                console.error(error)
+                console.error('Erreur de réseau:', error);
             }
         },
-        addStreetlight(streetlight){
-            this.streetlights.push(streetlight)
+        
+
+        startFetchingStatus(id) {
+            this.fetchStreetlightStatusById(id);
+            setInterval(() => {
+                this.fetchStreetlightStatusById(id);
+            }, 10000);
         }
     }
-})
+});

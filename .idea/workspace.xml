@@ -5,29 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7103951a-0648-409c-80e6-ab66d1d58990" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/controller/StreetlightStatusController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/utils/observerTime/GestionEclairageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/utils/observerTime/SimulatedClock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/utils/observerTime/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/NavBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/stores/streetlightStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stores/streetlightStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/ServerStreetlightApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/ServerStreetlightApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/ManagementRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/ManagementRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/Streetlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/entity/Streetlight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/StreetLightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/StreetLightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/ManagementRuleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/ManagementRuleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/StreetLightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/service/impl/StreetLightServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/utils/observerTime/SimulationTime.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/utils/observerTime/Streetlight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/utils/observerTime/StreetlightObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/utils/observerTime/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/utils/observerTime/StreetlightSubject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/controller/StreetlightStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/controller/StreetlightStatusController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +121,7 @@
       <workItem from="1727850069100" duration="193000" />
       <workItem from="1727852493417" duration="3364000" />
       <workItem from="1727859493288" duration="1519000" />
-      <workItem from="1727862047927" duration="11636000" />
+      <workItem from="1727862047927" duration="15550000" />
     </task>
     <servers />
   </component>

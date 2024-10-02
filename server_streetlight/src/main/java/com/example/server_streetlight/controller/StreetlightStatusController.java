@@ -4,11 +4,11 @@ import com.example.server_streetlight.dto.streetLight.StreetLightResponseDTO;
 import com.example.server_streetlight.service.StreetLightService;
 import com.example.server_streetlight.utils.observerTime.GestionEclairageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5174")
 @RequestMapping("/api/streetlights")
 public class StreetlightStatusController {
 
