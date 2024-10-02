@@ -1,11 +1,10 @@
 import { defineStore } from 'pinia'
 
 export const useStreetlightStore = defineStore('streetlight', {
-  state: () => ({
-    streetlights: [],
-    streetlight: {},
-    }
-    ),
+    state: () => ({
+        streetlights: [],
+        streetlight: {},
+    }),
     getters: {
         getStreetlights: (state) => state.streetlights,
         getStreetlight: (state) => state.streetlight
@@ -23,7 +22,5 @@ export const useStreetlightStore = defineStore('streetlight', {
         addStreetlight(streetlight){
             this.streetlights.push(streetlight)
         }
-        
-
     }
 })

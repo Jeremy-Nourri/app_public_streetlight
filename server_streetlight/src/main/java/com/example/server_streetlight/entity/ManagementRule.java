@@ -22,7 +22,7 @@ public class ManagementRule {
     private String ruleName;
 
     @Column(nullable = false)
-    private String condition;
+    private String ruleCondition;
 
     @Column(nullable = false)
     private String action;

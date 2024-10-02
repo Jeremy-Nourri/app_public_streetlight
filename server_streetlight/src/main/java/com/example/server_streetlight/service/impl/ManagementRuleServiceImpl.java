@@ -42,7 +42,7 @@ public class ManagementRuleServiceImpl implements ManagementRuleService {
     public ManagementRuleResponseDTO createManagementRule(ManagementRuleRequestDTO managementRuleRequestDTO) {
         ManagementRule managementRule = new ManagementRule();
         managementRule.setRuleName(managementRuleRequestDTO.getRuleName());
-        managementRule.setCondition(managementRuleRequestDTO.getCondition());
+        managementRule.setRuleCondition(managementRuleRequestDTO.getCondition());
         managementRule.setAction(managementRuleRequestDTO.getAction());
         return convertToDTO(managementRuleRepository.save(managementRule));
     }
@@ -53,7 +53,7 @@ public class ManagementRuleServiceImpl implements ManagementRuleService {
                 () -> new RuntimeException("ManagementRule with id " + id + " not found")
         );
         managementRule.setRuleName(managementRuleRequestDTO.getRuleName());
-        managementRule.setCondition(managementRuleRequestDTO.getCondition());
+        managementRule.setRuleCondition(managementRuleRequestDTO.getCondition());
         managementRule.setAction(managementRuleRequestDTO.getAction());
         return convertToDTO(managementRuleRepository.save(managementRule));
     }
@@ -72,7 +72,7 @@ public class ManagementRuleServiceImpl implements ManagementRuleService {
         ManagementRuleResponseDTO managementRuleResponseDTO = new ManagementRuleResponseDTO();
         managementRuleResponseDTO.setId(managementRule.getId());
         managementRuleResponseDTO.setRuleName(managementRule.getRuleName());
-        managementRuleResponseDTO.setCondition(managementRule.getCondition());
+        managementRuleResponseDTO.setCondition(managementRule.getRuleCondition());
         managementRuleResponseDTO.setAction(managementRule.getAction());
         return managementRuleResponseDTO;
     }

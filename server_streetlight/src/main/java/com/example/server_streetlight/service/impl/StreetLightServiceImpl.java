@@ -9,7 +9,6 @@ import com.example.server_streetlight.entity.Streetlight;
 import com.example.server_streetlight.exception.StreetlightNotFoundException;
 import com.example.server_streetlight.repository.StreetlightRepository;
 import com.example.server_streetlight.service.StreetLightService;
-import com.example.server_streetlight.utils.observerTime.StreetlightObserver;
 import com.example.server_streetlight.utils.observers.Observer;
 import com.example.server_streetlight.utils.observers.TimeOfDay;
 import com.example.server_streetlight.utils.observers.Weather;
@@ -18,10 +17,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class StreetLightServiceImpl implements StreetLightService, StreetlightObserver {
+public class StreetLightServiceImpl implements StreetLightService{
 
 
     @Autowired
@@ -39,9 +39,17 @@ public class StreetLightServiceImpl implements StreetLightService, StreetlightOb
 
     @Override
     public StreetLightResponseDTO getStreetlightById(Long id) {
-        return streetlightRepository.findById(id).map(this::convertToDTO).orElseThrow(
-                () -> new StreetlightNotFoundException("Streetlight with id " + id + " not found")
-        );
+        // Logique pour récupérer le lampadaire de la base de données
+        Optional<Streetlight> streetlightOpt = streetlightRepository.findById(id);
+
+        // Si le lampadaire existe, on le retourne
+        if (streetlightOpt.isPresent()) {
+            return convertToDtoWithFullAttributes(streetlightOpt.get());
+        }
+
+        // Si le lampadaire n'existe pas, on lance une exception
+
+        throw new StreetlightNotFoundException("Streetlight with id " + id + " not found");
     }
 
     @Override
@@ -72,11 +80,6 @@ public class StreetLightServiceImpl implements StreetLightService, StreetlightOb
         streetlightRepository.delete(streetlight);
         Streetlight deletedStreetlight = streetlightRepository.findById(id).orElse(null);
         return deletedStreetlight == null;
-    }
-
-    @Override
-    public boolean activeStreetlight(Long id) {
-        return false;
     }
 
     @Override
@@ -113,7 +116,7 @@ public class StreetLightServiceImpl implements StreetLightService, StreetlightOb
                 .managementRules(streetlight.getManagementRules().stream().map(managementRule -> ManagementRuleResponseDTO.builder()
                         .id(managementRule.getId())
                         .ruleName(managementRule.getRuleName())
-                        .condition(managementRule.getCondition())
+                        .condition(managementRule.getRuleCondition())
                         .action(managementRule.getAction())
                         .build()).collect(Collectors.toSet()))
                 .isActive(streetlight.isActive())
@@ -163,14 +166,14 @@ public class StreetLightServiceImpl implements StreetLightService, StreetlightOb
 //        }
 //    }
 
-    @Override
-    public void update(int hour) {
-        if (hour >= 19 || hour < 7) {
-            adjustStreetlightBrightness(1);
-        } else {
-            adjustStreetlightBrightness(0);
-        }
-    }
+//    @Override
+//    public void update(int hour) {
+//        if (hour >= 19 || hour < 7) {
+//            adjustStreetlightBrightness(1);
+//        } else {
+//            adjustStreetlightBrightness(0);
+//        }
+//    }
 
     private void adjustStreetlightBrightness(int brightness) {
         List<Streetlight> streetlights = (List<Streetlight>) streetlightRepository.findAll();

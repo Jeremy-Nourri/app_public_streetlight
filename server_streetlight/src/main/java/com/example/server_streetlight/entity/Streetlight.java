@@ -24,16 +24,12 @@ public class Streetlight {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     private String location;
 
-    @Column(nullable = false)
     private boolean isActive;
 
-    @Column(nullable = false)
     private double brightness;
 
-    @Column(nullable = false)
     private double power;
 
     @OneToMany(mappedBy = "streetlight")
@@ -43,6 +39,6 @@ public class Streetlight {
     private List<Sensor> sensors;
 
     @ManyToMany(mappedBy = "streetlights")
-    private Set<ManagementRule> managementRules = new HashSet<>();
+    private List<ManagementRule> managementRules;
 
 }
