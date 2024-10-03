@@ -102,7 +102,7 @@
   }
   
   h1, h2 {
-    display: grid;
+    display: inline;
     color: rgb(75 85 99);
     margin: 20px;
     font-weight: bolder;
@@ -110,11 +110,11 @@
   }
   
   ul {
-    margin-left: 5px;
+    margin: 20px;
   }
   
   p {
-    margin: 10px;
+    margin: 20px;
   }
 
   a{
