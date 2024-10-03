@@ -1,5 +1,5 @@
 //package com.example.server_streetlight.controller;
-
+//
 //import com.example.server_streetlight.entity.User;
 //import com.example.server_streetlight.service.UserService;
 //import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +31,9 @@
 //
 //    @PostMapping("/login")
 //    public ResponseEntity<Map<String, Object>> login(@RequestBody User user) {
-//        if (userService.checkUser(user.getEmail(), user.getPassword())) {
+//        if (userService.checkUserNameExists(user.getEmail()) && userService.verifyUser(user.getEmail(), user.getPassword())) {
 //            Map<String, Object> response = new HashMap<>();
-//            String token = userService.generateToken(user.getEmail());
+//            String token = userService.generateToken(user.getEmail(), user.getPassword());
 //            response.put("token", token);
 //            return ResponseEntity.ok(response);
 //        } else {
