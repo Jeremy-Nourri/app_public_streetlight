@@ -15,7 +15,7 @@ export const useStreetlightStore = defineStore('streetlight', {
                 const response = await fetch(`http://localhost:8080/api/streetlights/${id}/status`, {
                     method: 'GET',
                     headers: {
-                        'Content-Type': 'application/json', 
+                        'Content-Type': 'application/json',
                     }
                 });
         
