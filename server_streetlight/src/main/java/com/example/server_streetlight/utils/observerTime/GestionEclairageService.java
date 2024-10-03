@@ -63,4 +63,8 @@ public class GestionEclairageService implements Observer {
     public void notifyObservers() {
         simulatedClock.notifyObservers(hour); // Notifier les observateurs
     }
+
+    public Integer getHour() {
+        return hour;
+    }
 }

@@ -28,5 +28,10 @@ public class StreetlightStatusController {
         StreetLightResponseDTO streetlight = streetLightService.getStreetlightById(id);
         return ResponseEntity.ok(streetlight.getIsActive());
     }
+
+    @GetMapping("/time")
+    public ResponseEntity<Integer> getTime() {
+        return ResponseEntity.ok(gestionEclairageService.getHour());
+    }
 }
 

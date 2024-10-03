@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7103951a-0648-409c-80e6-ab66d1d58990" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/WebConfig.java" afterDir="false" />
+    <list default="true" id="7103951a-0648-409c-80e6-ab66d1d58990" name="Changes" comment="feat: composant vue in progress">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/038dcb3c-d98e-4f30-966e-79616dc92987.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/038dcb3c-d98e-4f30-966e-79616dc92987/storage_v2/_src_/schema/server_streetlight_security.iH4PTQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/stores/streetlightStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stores/streetlightStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/jwt/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/controller/StreetlightStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/controller/StreetlightStatusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/utils/observerTime/GestionEclairageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server_streetlight/src/main/java/com/example/server_streetlight/utils/observerTime/GestionEclairageService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,32 +57,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ServerStreetlightApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ServerStreetlightApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrateur\Documents" />
@@ -121,8 +121,18 @@
       <workItem from="1727850069100" duration="193000" />
       <workItem from="1727852493417" duration="3364000" />
       <workItem from="1727859493288" duration="1519000" />
-      <workItem from="1727862047927" duration="15550000" />
+      <workItem from="1727862047927" duration="15586000" />
+      <workItem from="1727937583640" duration="7476000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: composant vue in progress">
+      <option name="closed" value="true" />
+      <created>1727882467687</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727882467687</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +148,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: composant vue in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: composant vue in progress" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
