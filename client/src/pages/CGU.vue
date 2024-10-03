@@ -29,7 +29,7 @@
           {
             title: "Article 2 : Mentions légales",
             content: [
-              "L'édition du site StartCity est assurée par la société Citizen."
+              "L'édition du site Citizen est assurée par la société Citizen."
             ]
           },
           {
@@ -53,7 +53,7 @@
           {
             title: "Article 5 : Propriété intellectuelle",
             content: [
-              "Les marques, logos ainsi que les contenus du site lapetiteperle (illustrations graphiques, textes…) sont protégés par le Code de la propriété intellectuelle et par le droit d’auteur.",
+              "Les marques, logos ainsi que les contenus du site Citizen (illustrations graphiques, textes…) sont protégés par le Code de la propriété intellectuelle et par le droit d’auteur.",
               "La reproduction et la copie des contenus par l’Utilisateur requièrent une autorisation préalable du site. Dans ce cas, toute utilisation à des usages commerciaux ou à des fins publicitaires est proscrite."
             ]
           },
