@@ -1,6 +1,6 @@
 <template>
     <div class="cgu">
-      <h1>Conditions Générales d'Utilisation du site <em>Citizen</em></h1>
+      <h1>Conditions Générales d'Utilisation du site TransportCitizen</h1>
   
       <section v-for="(article, index) in articles" :key="index">
         <h2>{{ article.title }}</h2>
@@ -23,19 +23,19 @@
           {
             title: "Article 1: Objet",
             content: [
-              "Les présentes CGU ou Conditions Générales d’Utilisation encadrent juridiquement l’utilisation des services du site Citizen. Constituant le contrat entre la société Citizen, l’Utilisateur, l’accès au site doit être précédé de l’acceptation de ces CGU. L’accès à cette plateforme signifie l’acceptation des présentes CGU."
+              "Les présentes CGU ou Conditions Générales d’Utilisation encadrent juridiquement l’utilisation des services du site TransportCitizen. Constituant le contrat entre la société TransportCitizen, l’Utilisateur, l’accès au site doit être précédé de l’acceptation de ces CGU. L’accès à cette plateforme signifie l’acceptation des présentes CGU."
             ]
           },
           {
             title: "Article 2 : Mentions légales",
             content: [
-              "L'édition du site Citizen est assurée par la société Citizen."
+              "L'édition du site TransportCitizen est assurée par la société TransportCitizen."
             ]
           },
           {
             title: "Article 3 : Accès au site",
             content: [
-              "Le site Citizen permet d'accéder gratuitement aux services suivants :"
+              "Le site TransportCitizen permet d'accéder gratuitement aux services suivants :"
             ],
             list: [
               "Accès aux services de transport en commun",
@@ -53,7 +53,7 @@
           {
             title: "Article 5 : Propriété intellectuelle",
             content: [
-              "Les marques, logos ainsi que les contenus du site Citizen (illustrations graphiques, textes…) sont protégés par le Code de la propriété intellectuelle et par le droit d’auteur.",
+              "Les marques, logos ainsi que les contenus du site TransportCitizen (illustrations graphiques, textes…) sont protégés par le Code de la propriété intellectuelle et par le droit d’auteur.",
               "La reproduction et la copie des contenus par l’Utilisateur requièrent une autorisation préalable du site. Dans ce cas, toute utilisation à des usages commerciaux ou à des fins publicitaires est proscrite."
             ]
           },
@@ -62,15 +62,15 @@
             content: [
               "Lors des visites sur le site, l’installation automatique d’un cookie sur le logiciel de navigation de l’Utilisateur peut survenir.",
               "Les cookies correspondent à de petits fichiers déposés temporairement sur le disque dur de l’ordinateur de l’Utilisateur. Ces cookies sont nécessaires pour assurer l’accessibilité et la navigation sur le site. Ces fichiers ne comportent pas d’informations personnelles et ne peuvent pas être utilisés pour l’identification d’une personne.",
-              "L’information présente dans les cookies est utilisée pour améliorer les performances de navigation sur le site Citizen.",
-              "En naviguant sur le site, l’Utilisateur accepte les cookies. Leur désactivation peut s’effectuer via les paramètres du logiciel de navigation. L'utilisateur peut refuser les cookies via un bandeau disponible lors de la première connexion au site Citizen."
+              "L’information présente dans les cookies est utilisée pour améliorer les performances de navigation sur le site TransportCitizen.",
+              "En naviguant sur le site, l’Utilisateur accepte les cookies. Leur désactivation peut s’effectuer via les paramètres du logiciel de navigation. L'utilisateur peut refuser les cookies via un bandeau disponible lors de la première connexion au site TransportCitizen."
             ]
           },
           {
             title: "Article 7 : Responsabilité",
             content: [
               "Bien que les informations publiées sur le site soient réputées fiables, le site se réserve la faculté d’une non-garantie de la fiabilité des sources.",
-              "Les informations diffusées sur le site Citizen sont présentées à titre purement informatif et sont sans valeur contractuelle. En dépit des mises à jour régulières, la responsabilité du site ne peut être engagée en cas de modification des dispositions administratives et juridiques apparaissant après la publication. Il en est de même pour l’utilisation et l’interprétation des informations communiquées sur la plateforme.",
+              "Les informations diffusées sur le site TransportCitizen sont présentées à titre purement informatif et sont sans valeur contractuelle. En dépit des mises à jour régulières, la responsabilité du site ne peut être engagée en cas de modification des dispositions administratives et juridiques apparaissant après la publication. Il en est de même pour l’utilisation et l’interprétation des informations communiquées sur la plateforme.",
               "Le site décline toute responsabilité concernant les éventuels virus pouvant infecter le matériel informatique de l’Utilisateur après l’utilisation ou l’accès à ce site.",
               "Le site ne peut être tenu pour responsable en cas de force majeure ou du fait imprévisible et insurmontable d’un tiers.",
               "La garantie totale de la sécurité et la confidentialité des données n’est pas assurée par le site. Cependant, le site s’engage à mettre en œuvre toutes les méthodes requises pour le faire au mieux.",
