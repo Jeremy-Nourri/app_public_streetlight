@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class GestionEclairageService implements Observer {
 
     private SimulatedClock simulatedClock;
-    private Streetlight streetlight; // À initialiser correctement
+    private Streetlight streetlight;
 
     private int hour = 0;
 
@@ -23,9 +23,6 @@ public class GestionEclairageService implements Observer {
     public void init() {
         simulatedClock = new SimulatedClock();
 
-
-
-        // Récupérer un lampadaire existant ou en créer un nouveau si nécessaire
         streetlight = streetlightRepository.findById(1L).orElse(null);
         if (streetlight == null) {
             streetlight = new Streetlight();
@@ -33,35 +30,35 @@ public class GestionEclairageService implements Observer {
             streetlightRepository.save(streetlight);
         }
 
-        simulatedClock.addObserver(this); // Ajouter cet objet comme observateur de l'horloge simulée
+        simulatedClock.addObserver(this);
 
         System.out.println("GestionEclairageService: Lampadaire initialisé avec isActive = false.");
     }
 
 
-    @Scheduled(fixedRate = 10000) // Tâche exécutée toutes les 10 secondes
+    @Scheduled(fixedRate = 10000)
     public void updateClock() {
         System.out.println("updateClock appelé.");
-        hour = (hour + 1) % 24; // Avancer l'heure simulée
+        hour = (hour + 1) % 24;
         System.out.println("GestionEclairageService: Heure actuelle : " + hour + "h");
-        notifyObservers(); // Notifier les observateurs
+        notifyObservers();
     }
 
     @Override
     public void update(int hour) {
-        if (hour >= 19 || hour < 7) { // Si c'est entre 19h et 7h, il fait nuit
-            streetlight.setActive(true); // Allumer le lampadaire
+        if (hour >= 19 || hour < 7) {
+            streetlight.setActive(true);
             System.out.println("Lampadaire allumé. Heure : " + hour + "h");
         } else {
-            streetlight.setActive(false); // Éteindre le lampadaire pendant la journée
+            streetlight.setActive(false);
             System.out.println("Lampadaire éteint. Heure : " + hour + "h");
         }
 
-        streetlightRepository.save(streetlight); // Enregistrer l'état du lampadaire
+        streetlightRepository.save(streetlight);
     }
 
     public void notifyObservers() {
-        simulatedClock.notifyObservers(hour); // Notifier les observateurs
+        simulatedClock.notifyObservers(hour);
     }
 
     public Integer getHour() {

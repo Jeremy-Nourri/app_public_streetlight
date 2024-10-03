@@ -20,7 +20,7 @@ public class SimulatedClock implements Subject {
     @Override
     public void notifyObservers(int hour) {
         for (Observer observer : observers) {
-            observer.update(hour); // Notifier chaque observateur avec l'heure actuelle
+            observer.update(hour);
         }
     }
 }

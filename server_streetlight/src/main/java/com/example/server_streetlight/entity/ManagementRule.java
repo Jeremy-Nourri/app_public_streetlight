@@ -35,5 +35,4 @@ public class ManagementRule {
    )
    private HashSet<Streetlight> streetlights;
 
-
 }

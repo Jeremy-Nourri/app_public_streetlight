@@ -39,15 +39,12 @@ public class StreetLightServiceImpl implements StreetLightService{
 
     @Override
     public StreetLightResponseDTO getStreetlightById(Long id) {
-        // Logique pour récupérer le lampadaire de la base de données
+
         Optional<Streetlight> streetlightOpt = streetlightRepository.findById(id);
 
-        // Si le lampadaire existe, on le retourne
         if (streetlightOpt.isPresent()) {
             return convertToDtoWithFullAttributes(streetlightOpt.get());
         }
-
-        // Si le lampadaire n'existe pas, on lance une exception
 
         throw new StreetlightNotFoundException("Streetlight with id " + id + " not found");
     }
