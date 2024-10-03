@@ -123,7 +123,7 @@
     padding: 8px 4px;
     border-radius: 8px;
     color: azure;
-    bottom: 0;
+    bottom: 5px;
     left: 870px;
   }
 
